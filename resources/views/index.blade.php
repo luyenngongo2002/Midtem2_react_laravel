@@ -30,32 +30,31 @@
       {{Session::get('success')}}
     </div>
     @endif
-    <div><h3 class="text-center">DĨA CƠM</h3></div>
-    
-    <div class='row'>
-        @foreach($dishes as $dis)
-        @if($dis->kind_id=="1")
-        <div class="col-3">
-            <a href="{{route('dishes.show',$dis->id)}}" class="text-decoration:none">
-            <img src="/image/{{$dis ->image}}" class="img-thumbnail" alt=""></div>
-            <div class="col-9 ">
-                <br>
-                <div class="row">
-                <div class="col-8 text-dark"><h5>{{$dis->name}}</h5></div>
-                <div class="col-4 text-dark  text-right">{{$dis->price}} .VNĐ</div>
-                </div>
-                <p class='text-dark'>{{$dis->des}}</p>
-            </a>
-        </div>
-        
+    <div>
+      <h3 class="text-center">DĨA CƠM</h3></div>
+        <div class='row'>
+            @foreach($dishes as $dis)
+            @if($dis->kind_id=="1")
+            <div class="col-3">
+                <a href="{{route('dishes.show',$dis->id)}}" class="text-decoration:none">
+                <img src="/image/{{$dis ->image}}" class="img-thumbnail" alt=""></div>
+                <div class="col-9 ">
+                    <br>
+                    <div class="row">
+                    <div class="col-8 text-dark"><h5>{{$dis->name}}</h5></div>
+                    <div class="col-4 text-dark  text-right">{{$dis->price}} .VNĐ</div>
+                    </div>
+                    <p class='text-dark'>{{$dis->des}}</p>
+                </a>
+            </div>
             
-        @endif
-        @endforeach
-    </div>
-    <div><h3 class="text-center">BÁNH MÌ</h3></div>
-    
+                
+            @endif
+            @endforeach
+        </div>
+    <div>
+      <h3 class="text-center">BÁNH MÌ</h3></div>
     <div class='row'>
-        
         @foreach($dishes as $dis)
         @if($dis->kind_id=="2")
         <div class="col-6">
@@ -79,33 +78,27 @@
         
         
     </div>
-    <div><h3 class="text-center">BÚN PHỞ</h3></div>
-    
-    <div class="row">
-        
-        @foreach($dishes as $dis)
-        @if($dis->kind_id=="3")
-        
-        <div class="col-4">
-        <a href="{{route('dishes.show',$dis->id)}}" class="text-decoration:none">
-            <div><img src="/image/{{$dis ->image}}" style="width:300px;height:250px" class="img-thumbnail" alt=""></div>
-            <div class="text-dark">
-                <br>
-                <div class="row">
-                    <div class="col-6"><h5>{{$dis->name}}</h5></div>
-                    <div class="col-6  text-right">{{$dis->price}} .vnđ</div>
-                </div>
-                <p>{{$dis->des}}</p>
+    <div>
+      <h3 class="text-center">BÚN PHỞ</h3></div>
+        <div class='row'>
+            @foreach($dishes as $dis)
+            @if($dis->kind_id=="3")
+            <div class="col-3">
+                <a href="{{route('dishes.show',$dis->id)}}" class="text-decoration:none">
+                <img src="/image/{{$dis ->image}}" class="img-thumbnail" alt=""></div>
+                <div class="col-9 ">
+                    <br>
+                    <div class="row">
+                    <div class="col-8 text-dark"><h5>{{$dis->name}}</h5></div>
+                    <div class="col-4 text-dark  text-right">{{$dis->price}} .VNĐ</div>
+                    </div>
+                    <p class='text-dark'>{{$dis->des}}</p>
+                </a>
             </div>
-        </a>
+            @endif
+            @endforeach
         </div>
-        
-        
-        @endif
-        @endforeach
-        
-        
-    </div>
+    <div>
        
 </div>
 

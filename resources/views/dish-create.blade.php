@@ -12,21 +12,15 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <!-- Brand/logo -->
-  <a class="navbar-brand" href="#">
-    <img src="/image/avt.jpg" alt="logo" style="width:40px;">
-  </a>
-  
-  <!-- Links -->
-  <ul class="navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link" href="{{route('dishes.index')}}">Trang chủ</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="{{route('dishes.create')}}">Thêm món ăn</a>
-    </li>
-  </ul>
+    <nav class="navbar navbar-expand-sm navbar-light" style="background-color: #dd9521;">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+        <a class="nav-link" href="{{route('dishes.index')}}">Trang chủ</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="{{route('dishes.create')}}">Thêm món ăn</a>
+        </li>
+    </ul>
 </nav>
 
 
