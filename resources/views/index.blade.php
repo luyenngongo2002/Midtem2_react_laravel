@@ -11,11 +11,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <!-- Brand/logo -->
-  <a class="navbar-brand" href="#">
-    <img src="/image/avt.jpg" alt="logo" style="width:40px;">
-  </a>
+<nav class="navbar navbar-expand-sm navbar-light" style="background-color: #dd9521;">
   
   <!-- Links -->
   <ul class="navbar-nav">
@@ -23,27 +19,22 @@
       <a class="nav-link" href="{{route('dishes.index')}}">Trang chủ</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="{{route('dishes.create')}}">Thêm món ăn</a>
+      <a class="nav-link" href="{{route('dishes.create')}}">Thêm món</a>
     </li>
   </ul>
 </nav>
 
 <div class="container">
-<h3>Xin chào đến với nhà hàng LVT</h3>
-  <p>Chúc quý khách hàng thưởng thức những món ăn ngon</p>
     @if(Session::has('success'))
     <div class="alert alert-success">
       {{Session::get('success')}}
     </div>
     @endif
-    
-
-    <div><h3 class="text-center">CÁC MÓN CƠM</h3></div>
+    <div><h3 class="text-center">DĨA CƠM</h3></div>
     
     <div class='row'>
         @foreach($dishes as $dis)
         @if($dis->kind_id=="1")
-        
         <div class="col-3">
             <a href="{{route('dishes.show',$dis->id)}}" class="text-decoration:none">
             <img src="/image/{{$dis ->image}}" class="img-thumbnail" alt=""></div>
@@ -51,7 +42,7 @@
                 <br>
                 <div class="row">
                 <div class="col-8 text-dark"><h5>{{$dis->name}}</h5></div>
-                <div class="col-4 text-dark  text-right">{{$dis->price}} .vnđ</div>
+                <div class="col-4 text-dark  text-right">{{$dis->price}} .VNĐ</div>
                 </div>
                 <p class='text-dark'>{{$dis->des}}</p>
             </a>
@@ -61,7 +52,7 @@
         @endif
         @endforeach
     </div>
-    <div><h3 class="text-center">CÁC MÓN BÁNH MÌ</h3></div>
+    <div><h3 class="text-center">BÁNH MÌ</h3></div>
     
     <div class='row'>
         
@@ -75,7 +66,7 @@
                 <br>
                 <div class="row">
                     <div class="col-8"><h5>{{$dis->name}}</h5></div>
-                    <div class="col-4  text-right">{{$dis->price}} .vnđ</div>
+                    <div class="col-4  text-right">{{$dis->price}}.VNĐ</div>
                 </div>
                 <p>{{$dis->des}}</p>
             </div>
