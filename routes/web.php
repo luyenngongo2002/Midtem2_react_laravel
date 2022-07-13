@@ -16,4 +16,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::resource('dishes',\App\Http\Controllers\DishController::class);
+// Route::resource('dishes',\App\Http\Controllers\DishController::class);
